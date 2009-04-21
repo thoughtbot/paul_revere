@@ -1,0 +1,5 @@
+<% if current_announcement.exists? -%>
+  <%= strip_tags(current_announcement.body) %>
+  ---
+
+<% end -%>
