@@ -1,5 +1,4 @@
-Get ready for ANNOUNCER!!!
-====================
+= Get ready for ANNOUNCER!!!
 
 Simple announcement plugin extracted from Hoptoad.
 
