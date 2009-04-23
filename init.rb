@@ -1,3 +1,5 @@
 # Include hook code here
 
-ApplicationController.helper(AnnouncementsHelper)
+config.to_prepare do
+  ApplicationController.helper(AnnouncementsHelper)
+end
