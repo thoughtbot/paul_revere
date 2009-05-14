@@ -1,5 +1,0 @@
-= Get ready for ANNOUNCER!!!
-
-Simple announcement plugin extracted from Hoptoad.
-
-Copyright (c) 2009 Thoughtbot, released under the MIT license

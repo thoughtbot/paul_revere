@@ -1,0 +1,17 @@
+h1. Get ready for ANNOUNCER!!!
+
+Simple announcement plugin extracted from Hoptoad.
+
+h2. Install
+
+Install the engine as normal:
+
+@script/plugin install git://github.com/thoughtbot/get_ready_for_announcer.git@
+
+In application_controller.rb add:
+
+@helper :announcements@
+
+
+
+Copyright (c) 2009 Thoughtbot, released under the MIT license

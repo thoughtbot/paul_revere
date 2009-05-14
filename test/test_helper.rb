@@ -8,6 +8,7 @@ require 'action_controller'
 require 'action_view'
 require 'action_view/test_case'
 require 'test_help'
+require 'redgreen'
 
 class ActionView::TestCase
   class TestController < ActionController::Base
