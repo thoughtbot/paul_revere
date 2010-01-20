@@ -8,13 +8,9 @@ Install the engine as normal:
 
 @script/plugin install git://github.com/thoughtbot/paul_revere.git@
 
-In application_controller.rb add:
+Run the generator to create the migration and copy the javascript file into public:
 
-@helper :announcements@
-
-Copy the javascript file to public:
-
-@rake paul:revere:install@
+@./script/generate paul_revere@
 
 h2. Beastie Boys Lyrics
 
@@ -85,4 +81,4 @@ I grabbed two girlies and a beer that's cold.
 
 h2. License
 
-Copyright (c) 2009 Thoughtbot, released under the MIT license
+Copyright (c) 2009-2010 Thoughtbot, released under the MIT license
