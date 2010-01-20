@@ -1,18 +1,9 @@
-class Announcement
-
-  mattr_accessor :file_path
-  attr_accessor :created_at, :body
-
-  def initialize
-    if File.readable?(Announcement.file_path)
-      file = File.open(Announcement.file_path)
-      @body = file.read
-      @created_at = file.mtime.to_i unless body.blank?
-    end
+class Announcement < ActiveRecord::Base
+  def self.current
+    first(:order => 'created_at DESC') || new
   end
 
   def exists?
-    !created_at.nil?
+    !new_record?
   end
-
 end
