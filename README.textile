@@ -4,13 +4,17 @@ Simple announcement plugin to include "one off" style announcements in Rails web
 
 h2. Install
 
-Install the engine as normal:
+Install the engine as normal, in your Gemfile:
 
-@script/plugin install git://github.com/thoughtbot/paul_revere.git@
+@gem 'paul_revere'@
+
+or...
+
+@rails plugin install git://github.com/thoughtbot/paul_revere.git@
 
 Run the generator to create the migration and copy the javascript file into public:
 
-@./script/generate paul_revere@
+@rails generate paul_revere@
 
 h2. Beastie Boys Lyrics
 
