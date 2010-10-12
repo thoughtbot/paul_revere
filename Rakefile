@@ -1,6 +1,7 @@
 require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
+require "rake/gempackagetask"
 
 desc 'Default: run unit tests.'
 task :default => :test
@@ -21,3 +22,36 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+spec = Gem::Specification.new do |s|
+  s.name              = "paul_revere"
+  s.version           = "0.1.0"
+  s.summary           = "Simple announcement plugin to include 'one off' style announcements in Rails web apps."
+  s.author            = "Thoughtbot"
+  s.email             = "support@thoughtbot.com"
+  s.homepage          = "http://thoughtbot.com/community"
+
+  s.has_rdoc          = true
+  s.extra_rdoc_files  = %w(README.textile)
+  s.rdoc_options      = %w(--main README.textile)
+
+  s.files             = %w(init.rb install.rb MIT-LICENSE Rakefile README.textile uninstall.rb) + Dir.glob("{test,lib/**/*}")
+  s.require_paths     = ["lib"]
+
+  s.add_dependency("rails", "~> 3.0.0")
+  s.add_development_dependency("bourne")
+  s.add_development_dependency("shoulda")
+  s.add_development_dependency("redgreen")
+end
+
+Rake::GemPackageTask.new(spec) do |pkg|
+  pkg.gem_spec = spec
+end
+
+desc "Build the gemspec file #{spec.name}.gemspec"
+task :gemspec do
+  file = File.dirname(__FILE__) + "/#{spec.name}.gemspec"
+  File.open(file, "w") {|f| f << spec.to_ruby }
+end
+
+task :package => :gemspec
