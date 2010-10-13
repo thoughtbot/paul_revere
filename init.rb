@@ -1,2 +1,1 @@
-# Include hook code here
-
+require 'paul_revere'

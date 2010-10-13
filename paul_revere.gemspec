@@ -2,14 +2,14 @@
 
 Gem::Specification.new do |s|
   s.name = %q{paul_revere}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Thoughtbot"]
   s.date = %q{2010-10-12}
   s.email = %q{support@thoughtbot.com}
   s.extra_rdoc_files = ["README.textile"]
-  s.files = ["init.rb", "install.rb", "MIT-LICENSE", "Rakefile", "README.textile", "uninstall.rb", "lib/paul_revere.rb"]
+  s.files = ["init.rb", "install.rb", "MIT-LICENSE", "Rakefile", "README.textile", "uninstall.rb", "lib/generators/paul_revere/paul_revere_generator.rb", "lib/generators/paul_revere/templates/announcements.js", "lib/generators/paul_revere/templates/migration.rb", "lib/generators/paul_revere/USAGE", "lib/paul_revere.rb"]
   s.homepage = %q{http://thoughtbot.com/community}
   s.rdoc_options = ["--main", "README.textile"]
   s.require_paths = ["lib"]

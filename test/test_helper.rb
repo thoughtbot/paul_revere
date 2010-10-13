@@ -1,7 +1,5 @@
 ENV['RAILS_ENV'] = 'test'
 
-PROJECT_ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..'))
-
 require 'rubygems'
 require 'rails/all'
 require 'shoulda'
@@ -19,7 +17,8 @@ class ActiveSupport::TestCase
   end
 end
 
-load File.join(PROJECT_ROOT, 'generators', 'paul_revere', 'templates', 'migration.rb')
+PROJECT_ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+require File.join(PROJECT_ROOT, 'lib', 'generators', 'paul_revere', 'templates', 'migration')
 ActiveRecord::Base.establish_connection(
   :adapter  => 'sqlite3',
   :database => ':memory:'

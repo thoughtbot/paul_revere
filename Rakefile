@@ -25,16 +25,14 @@ end
 
 spec = Gem::Specification.new do |s|
   s.name              = "paul_revere"
-  s.version           = "0.1.0"
+  s.version           = "0.1.1"
   s.summary           = "Simple announcement plugin to include 'one off' style announcements in Rails web apps."
   s.author            = "Thoughtbot"
   s.email             = "support@thoughtbot.com"
   s.homepage          = "http://thoughtbot.com/community"
-
   s.has_rdoc          = true
   s.extra_rdoc_files  = %w(README.textile)
   s.rdoc_options      = %w(--main README.textile)
-
   s.files             = %w(init.rb install.rb MIT-LICENSE Rakefile README.textile uninstall.rb) + Dir.glob("{test,lib/**/*}")
   s.require_paths     = ["lib"]
 
