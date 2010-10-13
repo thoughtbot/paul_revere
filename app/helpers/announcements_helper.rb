@@ -7,5 +7,3 @@ module AnnouncementsHelper
     @current_announcement ||= Announcement.current
   end
 end
-
-

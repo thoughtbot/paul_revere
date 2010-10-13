@@ -1,0 +1,9 @@
+<% if current_announcement.exists? and not announcement_hidden?(current_announcement) %>
+  <div id="announcement">
+    <%= current_announcement.body %>
+    <div class="hide">
+      <%= link_to_function "hide", "hideAnnouncement('announcement_#{current_announcement.created_at}');" %>
+    </div>
+  </div>
+<% end %>
+
