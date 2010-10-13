@@ -33,7 +33,8 @@ spec = Gem::Specification.new do |s|
   s.has_rdoc          = true
   s.extra_rdoc_files  = %w(README.textile)
   s.rdoc_options      = %w(--main README.textile)
-  s.files             = %w(init.rb install.rb MIT-LICENSE Rakefile README.textile uninstall.rb) + Dir.glob("{test,lib/**/*}")
+  s.files             = %w(init.rb MIT-LICENSE Rakefile README.textile) +
+                        Dir.glob("{test,lib/**/*,app/**/*}")
   s.require_paths     = ["lib"]
 
   s.add_dependency("rails", "~> 3.0.0")
