@@ -25,7 +25,7 @@ end
 
 spec = Gem::Specification.new do |s|
   s.name              = "paul_revere"
-  s.version           = "0.1.2"
+  s.version           = "0.1.3"
   s.summary           = "Simple announcement plugin to include 'one off' style announcements in Rails web apps."
   s.author            = "Thoughtbot"
   s.email             = "support@thoughtbot.com"

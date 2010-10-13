@@ -2,14 +2,14 @@
 
 Gem::Specification.new do |s|
   s.name = %q{paul_revere}
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Thoughtbot"]
   s.date = %q{2010-10-13}
   s.email = %q{support@thoughtbot.com}
   s.extra_rdoc_files = ["README.textile"]
-  s.files = ["init.rb", "MIT-LICENSE", "Rakefile", "README.textile", "lib/generators/paul_revere/paul_revere_generator.rb", "lib/generators/paul_revere/templates/announcements.js", "lib/generators/paul_revere/templates/migration.rb", "lib/generators/paul_revere/USAGE", "lib/paul_revere.rb", "app/helpers/announcements_helper.rb", "app/models/announcement.rb", "app/views/announcements/_announcement.html.erb", "app/views/announcements/_email_announcement.erb"]
+  s.files = ["init.rb", "MIT-LICENSE", "Rakefile", "README.textile", "lib/generators/paul_revere/paul_revere_generator.rb", "lib/generators/paul_revere/templates/announcements.js", "lib/generators/paul_revere/templates/migration.rb", "lib/generators/paul_revere/USAGE", "lib/paul_revere.rb", "app/helpers/announcements_helper.rb", "app/models/announcement.rb", "app/views/announcements/_announcement.html.erb", "app/views/announcements/_announcement_for_all.html.erb", "app/views/announcements/_email_announcement.erb"]
   s.homepage = %q{http://thoughtbot.com/community}
   s.rdoc_options = ["--main", "README.textile"]
   s.require_paths = ["lib"]
