@@ -1,22 +1,21 @@
-h1. Paul Revere
+Paul Revere
+===========
 
 Simple announcement plugin to include "one off" style announcements in Rails web apps.
 
-h2. Install
+Install
+-------
 
-Install the engine as normal, in your Gemfile:
+Install as normal in your Gemfile:
 
-@gem 'paul_revere'@
-
-or...
-
-@rails plugin install git://github.com/thoughtbot/paul_revere.git@
+    gem 'paul_revere'
 
 Run the generator to create the migration and copy the javascript file into public:
 
-@rails generate paul_revere@
+    rails generate paul_revere
 
-h2. Beastie Boys Lyrics
+Beastie Boys Lyrics
+-------------------
 
 Now here's a little story I've got to tell
 About three bad brothers you know so well
@@ -83,6 +82,19 @@ His boy had beef and he got dropped
 Mike D. grabbed the money M.C.A. snatched the gold
 I grabbed two girlies and a beer that's cold.
 
-h2. License
 
-Copyright (c) 2009-2010 Thoughtbot, released under the MIT license
+Credits
+-------
+
+![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
+
+Paul Revere is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community)
+
+Thank you to all [the contributors](https://github.com/thoughtbot/paul_revere/contributors)!
+
+The names and logos for thoughtbot are trademarks of thoughtbot, inc.
+
+License
+-------
+
+Paul Revere is Copyright © 2009-2011 thoughtbot. It is free software, and may be redistributed under the terms specified in the MIT-LICENSE file.
