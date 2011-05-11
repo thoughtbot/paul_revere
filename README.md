@@ -53,7 +53,8 @@ You think this story's over but it's ready to begin
 "Now I got the gun you got the brew  
 You got two choices of what you can do  
 It's not a tough decision as you can see  
-I can blow you away or you can ride with me" I said, I'll ride with you if you can get me to the border  
+I can blow you away or you can ride with me"  
+I said, I'll ride with you if you can get me to the border  
 The sheriff's after me for what I did to his daughter  
 I did it like this, I did it like that  
 I did it with a whiffleball bat  
