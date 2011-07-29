@@ -1,7 +1,16 @@
 require 'rake'
 require 'rake/testtask'
-require 'rake/rdoctask'
-require "rake/gempackagetask"
+require 'rdoc/task'
+require "rubygems/package_task"
+require 'appraisal'
+
+desc "Default: run the unit tests."
+task :default => [:all]
+
+desc 'Test the plugin under all supported Rails versions.'
+task :all => ["appraisal:install"] do |t|
+  exec('rake appraisal test')
+end
 
 desc 'Default: run unit tests.'
 task :default => :test
@@ -15,7 +24,7 @@ Rake::TestTask.new(:test) do |t|
 end
 
 desc 'Generate documentation for the paul revere plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
+RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'PaulRevere'
   rdoc.options << '--line-numbers' << '--inline-source'
@@ -41,10 +50,6 @@ spec = Gem::Specification.new do |s|
   s.add_development_dependency("bourne")
   s.add_development_dependency("shoulda")
   s.add_development_dependency("redgreen")
-end
-
-Rake::GemPackageTask.new(spec) do |pkg|
-  pkg.gem_spec = spec
 end
 
 desc "Build the gemspec file #{spec.name}.gemspec"
