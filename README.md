@@ -14,6 +14,23 @@ Run the generator to create the migration and copy the javascript file into publ
 
     rails generate paul_revere
 
+Usage
+-----
+
+Paul Revere provides...
+
+* A model called Announcement, which has nothing more than timestamps and a "text" column.  We view the most recent Announcement as the "current" announcement, and will select that to show on the site.
+* A helper called `#current_announcement`, which will return that latest Announcement.
+* A view partial called `_announcement_for_all`, which is intended to be shown to all site users.
+* A view partial called `_announcement`, which is intended to be shown only to logged in users.
+* A view partial called `_email_announcement`, which is intended to be used in site emails which are sent out.
+
+So the flow would be...
+
+* Install the gem
+* Use those partials in the correct places in your view code and mailer view code where you want announcements to show up
+* When you want to make an announcement, use the rails console to create a new Announcement record
+
 Beastie Boys Lyrics
 -------------------
 
