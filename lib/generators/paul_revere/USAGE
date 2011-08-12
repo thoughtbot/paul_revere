@@ -1,8 +1,9 @@
 Description:
-    Explain the generator
+    Copies a javascript file and a migration into the application.
 
 Example:
-    rails generate paul_revere Thing
+    rails generate paul_revere
 
     This will create:
-        what/will/it/create
+        public/javascripts/announcements.js
+        db/migrate/create_announcements.rb
