@@ -19,7 +19,7 @@ Usage
 
 Paul Revere provides...
 
-* A model called Announcement, which has nothing more than timestamps and a "text" column.  We view the most recent Announcement as the "current" announcement, and will select that to show on the site.
+* A model called Announcement, which has nothing more than timestamps and a "body" column (text column).  We view the most recent Announcement as the "current" announcement, and will select that to show on the site.
 * A helper called `#current_announcement`, which will return that latest Announcement.
 * A view partial called `_announcement_for_all`, which is intended to be shown to all site users.
 * A view partial called `_announcement`, which is intended to be shown only to logged in users.
