@@ -3,10 +3,6 @@
 source "http://rubygems.org"
 
 gem "appraisal"
-gem "rails", "3.1.0.rc5"
-gem "sass-rails"
-gem "coffee-script"
-gem "uglifier"
-gem "jquery-rails"
+gem "rails", "3.0.10"
 
 gemspec :path=>"../"
