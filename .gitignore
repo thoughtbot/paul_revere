@@ -5,3 +5,4 @@ log/
 pkg
 rdoc
 gemfiles/*.lock
+*.gem
