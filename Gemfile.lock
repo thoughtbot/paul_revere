@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    paul_revere (0.1.6)
+    paul_revere (0.2.1)
       rails (~> 3.0)
 
 GEM

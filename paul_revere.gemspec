@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = "paul_revere"
-  s.version = "0.1.6"
-  s.date = %q{2011-09-04}
+  s.version = "0.2.1"
+  s.date = %q{2011-09-18}
   s.email = "support@thoughtbot.com"
   s.homepage = "https://github.com/thoughtbot/paul_revere"
   s.summary = "Simple announcement plugin to include 'one off' style announcements in Rails web apps."
