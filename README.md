@@ -31,6 +31,7 @@ Paul Revere provides...
 So the flow would be...
 
 * Install the gem
+* Add `helper :announcements` either to application_controller.rb or to the specific controllers where you want to make the announcement helpers available
 * Use those partials in the correct places in your view code and mailer view code where you want announcements to show up
 * When you want to make an announcement, use the rails console to create a new Announcement record
 
