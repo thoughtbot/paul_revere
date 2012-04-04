@@ -1,31 +1,18 @@
-# encoding: UTF-8
-require 'rubygems'
-begin
-  require 'bundler/setup'
-rescue LoadError
-  puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
-end
-
-require 'rake'
-require 'rdoc/task'
+require 'bundler/setup'
+require 'bundler/gem_tasks'
 require 'appraisal'
 
-require 'rspec/core'
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec)
 
-desc "Default: run the unit tests."
-task :default => [:all]
-
-desc 'Test the plugin under all supported Rails versions.'
-task :all => ["appraisal:install"] do |t|
-  exec('rake appraisal spec')
+task :default do |t|
+  if ENV['BUNDLE_GEMFILE'] =~ /gemfiles/
+    exec 'rake spec'
+  else
+    Rake::Task['appraise'].execute
+  end
 end
 
-desc 'Generate documentation for the paul revere plugin.'
-RDoc::Task.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'PaulRevere'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('lib/**/*.rb')
+task :appraise => ['appraisal:install'] do |t|
+  exec 'rake appraisal'
 end
