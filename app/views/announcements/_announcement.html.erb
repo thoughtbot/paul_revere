@@ -1,9 +1,1 @@
-<% if current_user and current_announcement.exists? and not announcement_hidden?(current_announcement) %>
-  <div id="flash-border" class="announcement">
-    <span><%= current_announcement.body.html_safe %></span>
-    <span class="hide">
-      <%= link_to_function "hide", "hideAnnouncement('announcement_#{current_announcement.created_at}');" %>
-    </span>
-  </div>
-<% end %>
-
+<%= render 'announcements/announcement_for_all' if current_user %>
