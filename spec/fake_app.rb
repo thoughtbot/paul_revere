@@ -13,4 +13,8 @@ ActiveRecord::Base.establish_connection(
   :database => ":memory:"
 )
 
+ActiveSupport.on_load(:active_record) do
+  attr_accessible(nil)
+end
+
 CreateAnnouncements.suppress_messages { CreateAnnouncements.up }
