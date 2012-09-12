@@ -6,16 +6,43 @@ Paul Revere
 
 Simple announcement plugin to include "one off" style announcements in Rails web apps.
 
-Install
--------
+Install with the asset pipeline (Rails 3.1+, asset pipeline enabled)
+--------------------------------------------------------------------
 
 Install as normal in your Gemfile:
 
     gem 'paul_revere'
 
-Run the generator to create the migration and copy the javascript file into public:
+Run the generator to create the migration:
 
     rails generate paul_revere
+
+Add the announcement JS to `app/assets/javascripts/application.js`:
+
+    //= require announcements
+
+Run the migration:
+
+    rake db:migrate && rake db:migrate:redo
+
+Install without the asset pipeline (Rails 3.0 or asset pipeline disabled)
+---------------------------------------------------------------------------
+
+Install as normal in your Gemfile:
+
+    gem 'paul_revere'
+
+Run the generator to create the migration and copy the JavaScript file into public:
+
+    rails generate paul_revere
+
+Add the announcement JS to your layout, such as `app/views/layouts/application.html.erb`:
+
+    <%= javascript_include_tag 'announcements' %>
+
+Run the migration:
+
+    rake db:migrate && rake db:migrate:redo
 
 Usage
 -----
@@ -31,9 +58,13 @@ Paul Revere provides...
 So the flow would be...
 
 * Install the gem
-* Add `helper :announcements` either to application_controller.rb or to the specific controllers where you want to make the announcement helpers available
-* Use those partials in the correct places in your view code and mailer view code where you want announcements to show up
-* When you want to make an announcement, use the rails console to create a new Announcement record
+* Use those partials in the correct places in your view code and mailer view code where you want announcements to show up:
+
+    <%= render 'announcements/announcement_for_all' %>
+
+* When you want to make an announcement, use the Rails console to create a new `Announcement` record:
+
+    Announcement.create!(body: 'This Web site is shutting down because you refuse to pay')
 
 Beastie Boys Lyrics
 -------------------
@@ -103,7 +134,6 @@ The piano player's out the music stopped
 His boy had beef and he got dropped  
 Mike D. grabbed the money M.C.A. snatched the gold  
 I grabbed two girlies and a beer that's cold.
-
 
 Credits
 -------
