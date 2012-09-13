@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    paul_revere (1.0)
+    paul_revere (1.1)
       rails (~> 3.0)
 
 GEM
@@ -50,7 +50,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.18)
+    mime-types (1.19)
     mocha (0.9.12)
     multi_json (1.0.3)
     polyglot (0.3.3)
