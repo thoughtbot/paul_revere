@@ -2,7 +2,7 @@
   <div id="announcement">
     <span><%= current_announcement.body.html_safe %></span>
     <span class="hide">
-      <%= link_to_function "hide", "hideAnnouncement('announcement_#{current_announcement.created_at}')" %>
+      <%= link_to_function "hide", "hideAnnouncement('announcement_#{current_announcement.cookie_identifier}')" %>
     </span>
   </div>
 <% end %>

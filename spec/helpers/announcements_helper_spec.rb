@@ -24,7 +24,7 @@ describe AnnouncementsHelper do
     end
 
     describe "and the user has hidden an announcement" do
-      before { helper.stubs(:cookies).returns("announcement_#{@announcement.created_at}" => "hidden") }
+      before { helper.stubs(:cookies).returns("announcement_#{@announcement.cookie_identifier}" => "hidden") }
 
       it "should return true when sent announcement_hidden? with announcement" do
         helper.announcement_hidden?(@announcement).should be_true
@@ -32,7 +32,7 @@ describe AnnouncementsHelper do
     end
 
     describe "and the user has not hidden an announcement" do
-      before { helper.stubs(:cookies).returns("announcement_#{@announcement.created_at}" => "not hidden") }
+      before { helper.stubs(:cookies).returns("announcement_#{@announcement.cookie_identifier}" => "not hidden") }
 
       it "should return false when sent announcement_hidden? with announcement" do
         helper.announcement_hidden?(@announcement).should be_false
