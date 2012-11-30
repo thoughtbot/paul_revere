@@ -5,4 +5,4 @@ rvm:
 gemfile:
   - gemfiles/rails_3.0.17.gemfile
   - gemfiles/rails_3.1.8.gemfile
-  - gemfiles/rails_3.2.8.gemfile
+  - gemfiles/rails_3.2.9.gemfile
