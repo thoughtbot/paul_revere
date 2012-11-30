@@ -6,6 +6,7 @@ require "rspec/rails"
 
 # Pull in the fake rails app
 require 'fake_app'
+require 'mocha'
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
@@ -17,7 +18,7 @@ RSpec.configure do |config|
   config.include RSpec::Matchers
 
   # == Mock Framework
-  config.mock_with :mocha
+  config.mock_framework = :mocha
 
   # Remove announcements before each example
   config.before(:each) do
