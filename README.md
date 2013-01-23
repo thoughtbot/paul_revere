@@ -5,8 +5,8 @@ Paul Revere
 
 Simple announcement plugin to include "one off" style announcements in Rails web apps.
 
-![Paul Revere's
-Ride](http://f.cl.ly/items/2u260D0Y2j2T3O3o4017/Screen%20Shot%202013-01-23%20at%2010.46.06%20AM.png)
+[![Paul Revere's
+Ride](http://f.cl.ly/items/2u260D0Y2j2T3O3o4017/Screen%20Shot%202013-01-23%20at%2010.46.06%20AM.png)](http://poetry.eserver.org/paul-revere.html)
 
 Install with the asset pipeline (Rails 3.1+, asset pipeline enabled)
 --------------------------------------------------------------------
