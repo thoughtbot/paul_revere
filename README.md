@@ -62,11 +62,11 @@ So the flow would be...
 * Install the gem
 * Use those partials in the correct places in your view code and mailer view code where you want announcements to show up:
 
-    <%= render 'announcements/announcement_for_all' %>
+        <%= render 'announcements/announcement_for_all' %>
 
 * When you want to make an announcement, use the Rails console to create a new `Announcement` record:
 
-    Announcement.create!(body: 'This Web site is shutting down because you refuse to pay')
+        Announcement.create!(body: 'This Web site is shutting down because you refuse to pay')
 
 Credits
 -------
