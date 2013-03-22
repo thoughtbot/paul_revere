@@ -1,6 +1,6 @@
 module AnnouncementsHelper
   def announcement_hidden?(announcement)
-    cookies["announcement_#{announcement.created_at}"] == "hidden"
+    cookies["announcement_#{announcement.cookie_identifier}"] == "hidden"
   end
 
   def current_announcement
