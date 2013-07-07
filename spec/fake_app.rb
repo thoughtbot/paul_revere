@@ -1,6 +1,7 @@
 # Create a rails app
 module PaulRevere
   class Application < Rails::Application
+    config.secret_key_base = '39085eb8b8aebd18942baec9e6ba0519310089b9a0212c7525'
   end
 end
 
@@ -13,8 +14,9 @@ ActiveRecord::Base.establish_connection(
   :database => ":memory:"
 )
 
+
 ActiveSupport.on_load(:active_record) do
   attr_accessible(nil)
-end
+end if Rails.version < "4.0.0"
 
 CreateAnnouncements.suppress_messages { CreateAnnouncements.up }

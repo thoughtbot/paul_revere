@@ -6,3 +6,9 @@ gemfile:
   - gemfiles/rails_3.0.20.gemfile
   - gemfiles/rails_3.1.10.gemfile
   - gemfiles/rails_3.2.11.gemfile
+  - gemfiles/rails_4.0.0.gemfile
+
+matrix:
+  exclude:
+    - rvm: 1.9.2
+      gemfile: gemfiles/rails_4.0.0.gemfile
