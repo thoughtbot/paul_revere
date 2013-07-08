@@ -1,8 +1,7 @@
-require 'rails/generators/active_record/migration'
+require 'rails/generators/active_record'
 
 class PaulRevereGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
-  extend ActiveRecord::Generators::Migration
 
   desc "Put the JavaScript and migration in place"
   source_root File.join(File.dirname(__FILE__), "templates")
@@ -10,6 +9,15 @@ class PaulRevereGenerator < Rails::Generators::Base
   def install
     copy_javascript if needs_js_copied?
     migration_template "migration.rb", "db/migrate/create_announcements.rb"
+    migration "announcement.rb", "app/models/announcement.rb"
+  end
+
+  def add_attr_accessible
+    inject_into_class "app/models/announcement.rb", Announcement, "attr_accessible :body\n\n" if Rails.version < "4.0.0"
+  end
+
+  def self.next_migration_number(directory)
+    ActiveRecord::Generators::Base.next_migration_number(directory)
   end
 
   private
@@ -23,7 +31,7 @@ class PaulRevereGenerator < Rails::Generators::Base
   end
 
   def needs_js_copied?
-    ::Rails.version < '3.1' || !::Rails.application.config.assets.enabled
+    ::Rails.version < '3.1' || !::Rails.application.config.assets.enabled || ::Rails.version >= "4.0.0"
   end
 
   def js_destination

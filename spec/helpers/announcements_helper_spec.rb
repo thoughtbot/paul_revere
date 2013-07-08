@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 require File.join(File.dirname(__FILE__), '..', '..', 'app', 'helpers', 'announcements_helper')
-require File.join(File.dirname(__FILE__), '..', '..', 'app', 'models', 'announcement')
+require File.join(File.dirname(__FILE__), '..', '..', 'lib', 'generators', 'paul_revere', 'templates', 'announcement')
 
 describe AnnouncementsHelper do
 

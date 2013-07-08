@@ -1,8 +1,6 @@
 class Announcement < ActiveRecord::Base
-  attr_accessible :body
-
   def self.current
-    first(:order => 'created_at DESC') || new
+    order('created_at DESC').first || new
   end
 
   def exists?

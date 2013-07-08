@@ -1,8 +1,14 @@
 require 'spec_helper'
 
-require File.join(File.dirname(__FILE__), '..', '..', 'app', 'models', 'announcement')
+require File.join(File.dirname(__FILE__), '..', '..', 'lib', 'generators', 'paul_revere', 'templates', 'announcement')
 
 describe Announcement do
+  before(:each) do
+    Announcement.class_eval do
+      attr_accessible :body
+    end
+  end if Rails.version < "4.0.0"
+
   it "should return the latest announcement when there are several" do
     old = create_announcement(:body => 'no fun', :created_at => 2.days.ago)
     latest = create_announcement(:body => 'fun', :created_at => 1.day.ago)

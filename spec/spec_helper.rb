@@ -6,7 +6,7 @@ require "rspec/rails"
 
 # Pull in the fake rails app
 require 'fake_app'
-require 'mocha'
+require 'mocha/setup'
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
