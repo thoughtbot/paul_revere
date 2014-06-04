@@ -4,4 +4,4 @@ source "http://rubygems.org"
 
 gem "rails", "3.2.14"
 
-gemspec :path=>"../"
+gemspec path: "../"

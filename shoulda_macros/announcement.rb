@@ -3,7 +3,7 @@ class ActiveSupport::TestCase
   def self.with_current_announcement(&blk)
     context "When there is a current announcement" do
       setup do
-        Annoucement.create!(:body => 'therefore,')
+        Annoucement.create!(body: 'therefore,')
       end
       merge_block(&blk)
     end

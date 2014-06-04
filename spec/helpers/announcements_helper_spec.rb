@@ -19,7 +19,7 @@ describe AnnouncementsHelper, type: :helper do
 
   describe "when there is an announcement" do
     before do
-      @announcement = Announcement.create!(:body => 'a body')
+      @announcement = Announcement.create!(body: 'a body')
       assign :announcement, @announcement
     end
 
