@@ -6,3 +6,4 @@ pkg
 rdoc
 gemfiles/*.lock
 *.gem
+tmp/
