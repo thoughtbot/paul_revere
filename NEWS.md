@@ -1,3 +1,11 @@
+New in 1.3:
+
+* Fix for ActiveRecord migration/generator error on Rails 4+.
+
+New in 1.2:
+
+* Rails 4 support.
+
 New in 1.1:
 
 * Support for the asset pipeline.
