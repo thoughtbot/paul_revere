@@ -11,6 +11,10 @@ class PaulRevereGenerator < Rails::Generators::Base
     migration_template "migration.rb", "db/migrate/create_announcements.rb"
   end
 
+  def self.next_migration_number dirname
+      ActiveRecord::Generators::Base.next_migration_number dirname
+  end
+
   private
 
   def copy_javascript
