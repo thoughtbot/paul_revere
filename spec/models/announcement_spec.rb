@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 require File.join(File.dirname(__FILE__), '..', '..', 'app', 'models', 'announcement')
 
@@ -8,20 +8,20 @@ describe Announcement do
     latest = create_announcement(:body => 'fun', :created_at => 1.day.ago)
     older = create_announcement(:body => 'less fun', :created_at => 3.days.ago)
 
-    Announcement.current.should == latest
+    expect(Announcement.current).to eq latest
   end
 
   it "should return an existent announcement where there is no announcement" do
     create_announcement(:body => 'body')
-    Announcement.current.exists?.should == true
+    expect(Announcement.current.exists?).to be true
   end
 
   it "should return a non-existent announcement where there is no announcement" do
-    Announcement.current.exists?.should be_false
+    expect(Announcement.current.exists?).to be false
   end
 
   it 'can always assign straight to the body' do
-    Announcement.create!(:body => 'hello').body.should == 'hello'
+    expect(Announcement.create!(:body => 'hello').body).to eq 'hello'
   end
 
   def create_announcement(attributes)
