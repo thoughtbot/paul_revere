@@ -19,9 +19,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency('rails', '>= 3.0')
 
-  s.add_development_dependency('rspec')
-  s.add_development_dependency('rspec-rails')
-  s.add_development_dependency('sqlite3')
-  s.add_development_dependency('appraisal')
-  s.add_development_dependency('generator_spec')
+  s.add_development_dependency('rspec-rails', '~> 3.1')
+  s.add_development_dependency('sqlite3', '~> 1.3')
+  s.add_development_dependency('appraisal', '~> 1.0')
+  s.add_development_dependency('generator_spec', '~> 0.9')
 end
