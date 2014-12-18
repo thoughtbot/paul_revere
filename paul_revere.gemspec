@@ -4,6 +4,7 @@ require 'paul_revere/version'
 Gem::Specification.new do |s|
   s.name        = 'paul_revere'
   s.version     = PaulRevere::VERSION.dup
+  s.licenses    = ['MIT']
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Nick Quaranto', 'Matt Jankowski', 'Joe Ferris', 'Christopher Meiklejohn', 'Tammer Saleh', 'Jason Morrison', 'Gabe Berke-Williams']
   s.email       = 'support@thoughtbot.com'
