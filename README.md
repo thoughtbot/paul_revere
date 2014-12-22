@@ -1,7 +1,7 @@
 Paul Revere
 ===========
 
-[![Build Status](https://secure.travis-ci.org/thoughtbot/paul_revere.png?branch=master)](http://travis-ci.org/thoughtbot/paul_revere)
+[![Build Status](https://travis-ci.org/thoughtbot/paul_revere.svg?branch=master)](https://travis-ci.org/thoughtbot/paul_revere)
 
 Simple announcement plugin to include "one off" style announcements in Rails web apps.
 
