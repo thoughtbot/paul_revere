@@ -22,7 +22,7 @@ class PaulRevereGenerator < Rails::Generators::Base
   end
 
   def needs_js_copied?
-    ::Rails.version < '3.1' || !::Rails.application.config.assets.enabled
+    !::Rails.application.config.assets.enabled
   end
 
   def js_destination

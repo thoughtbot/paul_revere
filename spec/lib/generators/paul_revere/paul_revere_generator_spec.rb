@@ -22,15 +22,6 @@ describe PaulRevereGenerator, type: :generator do
           end
         end
       end
-      if ::Rails.version < '3.1'
-        directory "public" do
-          directory "javascripts" do
-            file "announcements.js" do
-              contains "hideAnnouncement"
-            end
-          end
-        end
-      end
     }
   end
 

@@ -14,10 +14,4 @@ ActiveRecord::Base.establish_connection(
   :database => ":memory:"
 )
 
-if Rails::VERSION::MAJOR < 4
-  ActiveSupport.on_load(:active_record) do
-    attr_accessible(nil)
-  end
-end
-
 CreateAnnouncements.suppress_messages { CreateAnnouncements.up }
