@@ -12,6 +12,7 @@ require "fake_app"
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 RSpec.configure do |config|
+  config.include Rails.application.routes.url_helpers
   config.infer_spec_type_from_file_location!
   config.before(:each) do
     Announcement.delete_all
