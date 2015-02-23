@@ -1,7 +1,5 @@
 require 'rails_helper'
 
-require File.join(File.dirname(__FILE__), '..', '..', 'app', 'models', 'announcement')
-
 describe Announcement do
   it "should return the latest announcement when there are several" do
     old = create_announcement(:body => 'no fun', :created_at => 2.days.ago)

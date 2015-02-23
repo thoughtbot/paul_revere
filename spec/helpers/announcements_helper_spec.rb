@@ -1,8 +1,5 @@
 require 'rails_helper'
 
-require File.join(File.dirname(__FILE__), '..', '..', 'app', 'helpers', 'announcements_helper')
-require File.join(File.dirname(__FILE__), '..', '..', 'app', 'models', 'announcement')
-
 describe AnnouncementsHelper do
 
   it "should return the current announcement when sent current_announcement and cache doesn't exist" do
