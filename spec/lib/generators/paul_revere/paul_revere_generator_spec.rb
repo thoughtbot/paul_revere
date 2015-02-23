@@ -11,7 +11,7 @@ describe PaulRevereGenerator, type: :generator do
     run_generator
   end
 
-  specify do
+  it "installs the migrations" do
     expect(destination_root).to have_structure {
       directory "db" do
         directory "migrate" do
@@ -24,4 +24,17 @@ describe PaulRevereGenerator, type: :generator do
     }
   end
 
+  it "installs the javascript" do
+    expect(destination_root).to have_structure {
+      directory "vendor" do
+        directory "assets" do
+          directory "javascripts" do
+            file "announcements.js" do
+              contains "hideAnnouncement"
+            end
+          end
+        end
+      end
+    }
+  end
 end
