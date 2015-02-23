@@ -3,7 +3,7 @@ require 'rails/generators/active_record'
 class PaulRevereGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
 
-  desc "Put the JavaScript and migration in place"
+  desc "Copy the PaulRevere JavaScript and announcements migration"
   source_root File.join(File.dirname(__FILE__), "templates")
 
   def install
