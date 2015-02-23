@@ -1,3 +1,11 @@
+New in 1.4:
+
+* Reference the MIT license from the gemspec
+* Update migration to avoid Rails deprecation warning about timestamps `null :false`
+* Drop support for ruby 1.9.3
+* Remove deprecated Rails method `link_to_function`
+* Use ISO 8601 format when creating the Announcement cookie name
+
 New in 1.3:
 
 * Fix for ActiveRecord migration/generator error on Rails 4+.
