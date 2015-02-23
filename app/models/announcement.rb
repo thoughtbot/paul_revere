@@ -6,4 +6,8 @@ class Announcement < ActiveRecord::Base
   def exists?
     !new_record?
   end
+
+  def to_cookie_key
+    "#{self.class.name.downcase}_#{created_at.iso8601}"
+  end
 end

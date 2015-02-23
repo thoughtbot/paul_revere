@@ -14,7 +14,7 @@ describe "announcements/_announcement_for_all" do
     render
 
     expect(rendered).to match /Test/
-    expect(rendered).to match /announcement_#{announcement.created_at.iso8601}/
+    expect(rendered).to match /#{announcement.to_cookie_key}/
     expect(rendered).to match /hideAnnouncement/
   end
 end

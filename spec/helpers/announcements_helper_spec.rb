@@ -22,7 +22,7 @@ describe AnnouncementsHelper, "#announcement_hidden?" do
 
   describe "and the user has hidden an announcement" do
     it "returns true when sent announcement_hidden? with announcement" do
-      allow(helper).to receive(:cookies).and_return("announcement_#{@announcement.created_at}" => "hidden")
+      allow(helper).to receive(:cookies).and_return("#{@announcement.to_cookie_key}" => "hidden")
 
       expect(helper.announcement_hidden?(@announcement)).to be true
     end
@@ -30,7 +30,15 @@ describe AnnouncementsHelper, "#announcement_hidden?" do
 
   describe "and the user has not hidden an announcement" do
     it "returns false when sent announcement_hidden? with announcement" do
-      allow(helper).to receive(:cookies).and_return("announcement_#{@announcement.created_at}" => "not hidden")
+      allow(helper).to receive(:cookies).and_return("#{@announcement.to_cookie_key}" => "not hidden")
+
+      expect(helper.announcement_hidden?(@announcement)).to be false
+    end
+  end
+
+  describe "and the cookies are not set" do
+    it "returns false when sent announcement_hidden? with announcement" do
+      allow(helper).to receive(:cookies).and_return(Hash.new)
 
       expect(helper.announcement_hidden?(@announcement)).to be false
     end

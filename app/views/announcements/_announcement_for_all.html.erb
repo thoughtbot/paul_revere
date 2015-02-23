@@ -2,7 +2,7 @@
   <div id="announcement">
     <span><%= current_announcement.body.html_safe %></span>
     <span class="hide">
-      <%= link_to "hide", "#", onclick: "hideAnnouncement('announcement_#{current_announcement.created_at.iso8601}')" %>
+      <%= link_to "hide", "#", onclick: "hideAnnouncement('#{current_announcement.to_cookie_key}')" %>
     </span>
   </div>
 <% end %>
