@@ -5,7 +5,6 @@ require "generators/paul_revere/paul_revere_generator"
 describe PaulRevereGenerator, type: :generator do
 
   destination File.expand_path("../../tmp", __FILE__)
-  arguments %w(something)
 
   before(:all) do
     prepare_destination
