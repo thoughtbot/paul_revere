@@ -1,6 +1,6 @@
 class Announcement < ActiveRecord::Base
   def self.current
-    order('created_at desc').first || new
+    order("created_at desc").first || new
   end
 
   def exists?

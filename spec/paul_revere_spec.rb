@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe PaulRevere do
   it "should be valid" do

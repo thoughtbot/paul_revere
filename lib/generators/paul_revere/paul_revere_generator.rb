@@ -1,4 +1,4 @@
-require 'rails/generators/active_record'
+require "rails/generators/active_record"
 
 class PaulRevereGenerator < Rails::Generators::Base
   include Rails::Generators::Migration

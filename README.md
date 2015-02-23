@@ -8,7 +8,7 @@ This gem enables the inclusion of "one off" announcements in Rails applications.
 
 First, include the gem as normal in your Gemfile:
 
-    gem 'paul_revere'
+    gem "paul_revere"
 
 Then, run the generator to create the migration and copy the javascript.
 
