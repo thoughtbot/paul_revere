@@ -1,4 +1,4 @@
-<% if current_announcement.exists? && !announcement_hidden?(current_announcement) %>
+<% if announcement_visible?(current_announcement) %>
   <div id="announcement">
     <span><%= current_announcement.body.html_safe %></span>
     <span class="hide">
