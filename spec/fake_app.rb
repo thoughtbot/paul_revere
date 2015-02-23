@@ -10,4 +10,4 @@ PaulRevere::Application.initialize!
 
 # Run migrations
 require_relative "../lib/generators/paul_revere/templates/migration"
-CreateAnnouncements.suppress_messages { CreateAnnouncements.up }
+CreateAnnouncements.suppress_messages { CreateAnnouncements.new.change }
