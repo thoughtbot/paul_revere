@@ -16,7 +16,7 @@ end
 
 describe AnnouncementsHelper, "#announcement_hidden?" do
   before do
-    @announcement = Announcement.create!(body: "a body")
+    @announcement = create :announcement
     assign :announcement, @announcement
   end
 
@@ -64,7 +64,7 @@ end
 
 describe AnnouncementsHelper, "#announcement_visible?" do
   describe "with an announcement that exists" do
-    let(:announcement) { Announcement.create!(body: 'Test') }
+    let(:announcement) { create :announcement }
     it "returns true when the announcement is not hidden" do
       allow(helper).to receive(:announcement_hidden?).and_return(false)
       result = helper.announcement_visible?(announcement)

@@ -9,7 +9,7 @@ describe "announcements/_announcement_for_all" do
   end
 
   it "renders the announcement when announcements are visible" do
-    announcement = Announcement.create!(body: "Test")
+    announcement = create :announcement, body: "Test"
     allow(view).to receive(:announcement_visible?).and_return(true)
     render
 

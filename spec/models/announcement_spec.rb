@@ -2,15 +2,15 @@ require "rails_helper"
 
 describe Announcement, "#current" do
   it "should return the latest announcement when there are several" do
-    old = create_announcement(body: "no fun", created_at: 2.days.ago)
-    latest = create_announcement(body: "fun", created_at: 1.day.ago)
-    older = create_announcement(body: "less fun", created_at: 3.days.ago)
+    old = create :announcement, body: "no fun", created_at: 2.days.ago
+    latest = create :announcement, body: "fun", created_at: 1.day.ago
+    older = create :announcement, body: "less fun", created_at: 3.days.ago
 
     expect(Announcement.current).to eq latest
   end
 
   it "should return an existent announcement where there is no announcement" do
-    create_announcement(body: "body")
+    create :announcement, body: "body"
     expect(Announcement.current.exists?).to be true
   end
 
@@ -19,25 +19,10 @@ describe Announcement, "#current" do
   end
 end
 
-describe Announcement, "assigning to the body" do
-  it "can always assign straight to the body" do
-    expect(Announcement.create!(body: "hello").body).to eq "hello"
-  end
-end
-
 describe Announcement, "#to_cookie_key" do
   it "returns a value usable as a cookie key" do
-    record = Announcement.create!(body: 'Text')
+    record = create :announcement, body: 'Text'
 
     expect(record.to_cookie_key).to eq "announcement_#{record.created_at.iso8601}"
   end
-end
-
-def create_announcement(attributes)
-  announcement = Announcement.new
-  attributes.each do |key, value|
-    announcement.send("#{key}=", value)
-  end
-  announcement.save!
-  announcement
 end

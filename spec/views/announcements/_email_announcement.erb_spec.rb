@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "announcements/_email_announcement" do
   it "renders without error" do
-    Announcement.create!(body: "Test")
+    create :announcement, body: "Test"
     render
 
     expect(rendered).to match /Test/
