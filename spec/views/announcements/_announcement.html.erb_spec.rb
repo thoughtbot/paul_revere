@@ -1,29 +1,21 @@
 require "rails_helper"
 
-class User; end
-
-module ApplicationHelper
-  def current_user
-    raise
-  end
-end
-
 describe "announcements/_announcement" do
   before(:example) do
     stub_template "announcements/_announcement_for_all.html.erb" => "Partial"
   end
 
-  it "renders the all partial when there is a user" do
-    allow(view).to receive(:current_user).and_return(User.new)
+  it "renders the all partial when allowed to view announcements" do
+    allow(view).to receive(:announcement_visibility_allowed?).and_return(true)
     render
 
     expect(rendered).to match /Partial/
   end
 
-  it "does not render the all partial when there is not a user" do
-    allow(view).to receive(:current_user).and_return(nil)
+  it "does not render the all partial when not allowed to view announcements" do
+    allow(view).to receive(:announcement_visibility_allowed?).and_return(false)
     render
 
-    expect(rendered).to eq "\n"
+    expect(rendered).to eq ""
   end
 end

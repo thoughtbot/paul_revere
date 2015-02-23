@@ -1,1 +1,3 @@
-<%= render "announcements/announcement_for_all" if current_user %>
+<% if announcement_visibility_allowed? -%>
+  <%= render "announcements/announcement_for_all" %>
+<% end -%>
