@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "announcements/_announcement_for_all" do
+describe "announcements/_public_announcement" do
   it "renders nothing when announcements are not visible" do
     allow(view).to receive(:announcement_visible?).and_return(false)
     render

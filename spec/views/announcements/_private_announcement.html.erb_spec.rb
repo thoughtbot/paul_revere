@@ -1,8 +1,8 @@
 require "rails_helper"
 
-describe "announcements/_announcement" do
+describe "announcements/_private_announcement" do
   before(:example) do
-    stub_template "announcements/_announcement_for_all.html.erb" => "Partial"
+    stub_template "announcements/_public_announcement.html.erb" => "Partial"
   end
 
   it "renders the all partial when allowed to view announcements" do

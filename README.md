@@ -29,16 +29,17 @@ Finally, create the announcements table by running the migration:
 
 Paul Revere provides...
 
-* A model called `Announcement`, which has nothing more than timestamps and a
-  "body" column (text column).
+* A model called `Announcement`, which has timestamps and a "body" text column.
 * A `current` class method on `Announcement` which returns the latest
-  `Announcement`, or an unsaved new instance.
+  `Announcement`, or a new unsaved instance.
 * A view helper called `#current_announcement`, which will return that latest
   `Announcement` record.
-* A view partial called `_announcement_for_all`, which is intended to be shown
-  to all site users.
-* A view partial called `_announcement`, which is intended to be shown only to
-  logged in users.
+* A view partial called `_public_announcement`, which is intended to be shown to
+  all site users.
+* A view partial called `_private_announcement`, which is intended to be shown
+  only to logged in users.  Note that this merely wraps the rendering of the
+  public announcement with a call to a helper which checks that a user is signed
+  in. There is only one type of Announcement.
 * A view partial called `_email_announcement`, which is intended to be used in
   site emails which are sent out and need to include announcements.
 
@@ -51,7 +52,7 @@ Paul Revere provides...
 For example, to include the latest announcement for all site users:
 
 ```
-<%= render "announcements/announcement_for_all" %>
+<%= render "announcements/public_announcement" %>
 ```
 
 To make an announcement, use the Rails console to create a new record:
@@ -59,6 +60,12 @@ To make an announcement, use the Rails console to create a new record:
 ```
 Announcement.create!(body: "Free ice cream on Monday!")
 ```
+
+There is a helper method called `announcement_visibility_allowed?`, which is
+what the `private_announcement` partial calls to determine whether to allow the
+current session to view announcements.  The built-in implementation just checks
+that `current_user` is truth-y. Override that helper method if you want to do
+something more interesting as a check here.
 
 ## Credits
 
