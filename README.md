@@ -1,75 +1,66 @@
-Paul Revere
-===========
+# Paul Revere
 
 [![Build Status](https://travis-ci.org/thoughtbot/paul_revere.svg?branch=master)](https://travis-ci.org/thoughtbot/paul_revere)
 
-Simple announcement plugin to include "one off" style announcements in Rails web apps.
+This gem enables the inclusion of "one off" announcements in Rails applications.
 
-[![Paul Revere's
-Ride](http://f.cl.ly/items/2u260D0Y2j2T3O3o4017/Screen%20Shot%202013-01-23%20at%2010.46.06%20AM.png)](http://poetry.eserver.org/paul-revere.html)
+## Installation
 
-Install with the asset pipeline (Rails 3.1+, asset pipeline enabled)
---------------------------------------------------------------------
-
-Install as normal in your Gemfile:
+First, include the gem as normal in your Gemfile:
 
     gem 'paul_revere'
 
-Run the generator to create the migration:
+Then, run the generator to create the migration and copy the javascript.
 
     rails generate paul_revere
 
-Add the announcement JS to `app/assets/javascripts/application.js`:
+The announcements JS will be installed into vendor/assets/javascripts.
+You can add the announcement JS to `app/assets/javascripts/application.js`:
 
     //= require announcements
 
-Run the migration:
+This will include the javascript into the `application.js` for the entire site.
 
-    rake db:migrate && rake db:migrate:redo
+Finally, create the announcements table by running the migration:
 
-Install without the asset pipeline (Rails 3.0 or asset pipeline disabled)
----------------------------------------------------------------------------
+    rake db:migrate
 
-Install as normal in your Gemfile:
-
-    gem 'paul_revere'
-
-Run the generator to create the migration and copy the JavaScript file into public:
-
-    rails generate paul_revere
-
-Add the announcement JS to your layout, such as `app/views/layouts/application.html.erb`:
-
-    <%= javascript_include_tag 'announcements' %>
-
-Run the migration:
-
-    rake db:migrate && rake db:migrate:redo
-
-Usage
------
+## Background
 
 Paul Revere provides...
 
-* A model called `Announcement`, which has nothing more than timestamps and a "body" column (text column).  We view the most recent `Announcement` as the "current" announcement, and will select that to show on the site.
-* A helper called `#current_announcement`, which will return that latest `Announcement` record.
-* A view partial called `_announcement_for_all`, which is intended to be shown to all site users.
-* A view partial called `_announcement`, which is intended to be shown only to logged in users.
-* A view partial called `_email_announcement`, which is intended to be used in site emails which are sent out.
+* A model called `Announcement`, which has nothing more than timestamps and a
+  "body" column (text column).
+* A `current` class method on `Announcement` which returns the latest
+  `Announcement`, or an unsaved new instance.
+* A view helper called `#current_announcement`, which will return that latest
+  `Announcement` record.
+* A view partial called `_announcement_for_all`, which is intended to be shown
+  to all site users.
+* A view partial called `_announcement`, which is intended to be shown only to
+  logged in users.
+* A view partial called `_email_announcement`, which is intended to be used in
+  site emails which are sent out and need to include announcements.
 
-So the flow would be...
+## Usage
 
-* Install the gem
-* Use those partials in the correct places in your view code and mailer view code where you want announcements to show up:
+* Install the gem, run the migration, ensure the javascript can be accessed.
+* Use those partials in the correct places in your view code and mailer view
+  code where you want announcements to show up.
 
-        <%= render 'announcements/announcement_for_all' %>
+For example, to include the latest announcement for all site users:
 
-* When you want to make an announcement, use the Rails console to create a new `Announcement` record:
+```
+<%= render "announcements/announcement_for_all" %>
+```
 
-        Announcement.create!(body: 'This Web site is shutting down because you refuse to pay')
+To make an announcement, use the Rails console to create a new record:
 
-Credits
--------
+```
+Announcement.create!(body: "Free ice cream on Monday!")
+```
+
+## Credits
 
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
 
@@ -79,7 +70,7 @@ Thank you to all [the contributors](https://github.com/thoughtbot/paul_revere/co
 
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
-License
--------
+## License
 
-Paul Revere is Copyright © 2009-2014 thoughtbot. It is free software, and may be redistributed under the terms specified in the MIT-LICENSE file.
+Paul Revere is Copyright © 2009 thoughtbot, inc. It is free software, and may be
+redistributed under the terms specified in the MIT-LICENSE file.
