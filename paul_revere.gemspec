@@ -24,4 +24,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency("appraisal", "~> 1.0")
   s.add_development_dependency("generator_spec", "~> 0.9")
   s.add_development_dependency("factory_girl_rails", "~> 4.5")
+  s.add_development_dependency("jasmine", "~> 2.2")
 end

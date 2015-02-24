@@ -1,0 +1,10 @@
+src_files:
+  - spec/javascripts/support/jquery-2.1.3.min.js
+  - app/assets/javascripts/**/*.js
+stylesheets:
+  - stylesheets/**/*.css
+helpers:
+  - 'helpers/**/*.js'
+spec_files:
+  - '**/*[sS]pec.js'
+spec_helper: spec/javascripts/support/jasmine_helper.rb
