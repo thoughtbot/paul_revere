@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.version     = PaulRevere::VERSION.dup
   s.licenses    = ["MIT"]
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Nick Quaranto", "Matt Jankowski", "Joe Ferris", "Christopher Meiklejohn", "Tammer Saleh", "Jason Morrison", "Gabe Berke-Williams"]
+  s.authors     = `git shortlog -ns | cut -c8-`.split("\n")
   s.email       = "support@thoughtbot.com"
   s.homepage    = "https://github.com/thoughtbot/paul_revere"
   s.summary     = "Simple announcement plugin to include `one off` style announcements in Rails web apps."
