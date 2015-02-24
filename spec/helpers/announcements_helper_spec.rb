@@ -45,9 +45,6 @@ describe AnnouncementsHelper, "#announcement_unread?" do
   end
 end
 
-class User; end
-module ApplicationHelper; def current_user; raise; end; end
-
 describe AnnouncementsHelper, "#announcement_visibility_allowed?" do
   it "returns true with a user present" do
     allow(helper).to receive(:current_user).and_return(User.new)

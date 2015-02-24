@@ -1,3 +1,7 @@
+# Classes required for the tests
+class User; end
+module ApplicationHelper; def current_user; raise; end; end
+
 # Create a rails app
 module PaulRevere
   class Application < Rails::Application
