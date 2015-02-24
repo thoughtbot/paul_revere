@@ -21,7 +21,7 @@ end
 
 describe Announcement, "#to_cookie_key" do
   it "returns a value usable as a cookie key" do
-    record = create :announcement, body: 'Text'
+    record = create :announcement, body: "Text"
 
     expect(record.to_cookie_key).to eq "announcement_#{record.created_at.iso8601}"
   end

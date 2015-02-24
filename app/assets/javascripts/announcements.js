@@ -1,5 +1,5 @@
 function hideAnnouncement(announcement_key) {
-  createCookie(announcement_key, 'hidden', 365);
+  createCookie(announcement_key, "hidden", 365);
   $("#announcement").slideUp();
 }
 
