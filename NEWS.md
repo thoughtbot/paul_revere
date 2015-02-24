@@ -1,3 +1,11 @@
+New in 2.0.0:
+
+* Remove deprecated should macros
+* Switch to using `change` in generated Rails migrations
+* Clean up the README and installation instructions
+* Install the javascripts into vendor/assets
+* Rename helper methods and view partials
+
 New in 1.4:
 
 * Reference the MIT license from the gemspec
