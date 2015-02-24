@@ -14,33 +14,33 @@ describe AnnouncementsHelper, "#current_announcement" do
   end
 end
 
-describe AnnouncementsHelper, "#announcement_hidden?" do
+describe AnnouncementsHelper, "#announcement_unread?" do
   before do
     @announcement = create :announcement
     assign :announcement, @announcement
   end
 
   describe "and the user has hidden an announcement" do
-    it "returns true when sent announcement_hidden? with announcement" do
+    it "returns true when sent announcement_unread? with announcement" do
       allow(helper).to receive(:cookies).and_return("#{@announcement.to_cookie_key}" => "hidden")
 
-      expect(helper.announcement_hidden?(@announcement)).to be true
+      expect(helper.announcement_unread?(@announcement)).to be false
     end
   end
 
   describe "and the user has not hidden an announcement" do
-    it "returns false when sent announcement_hidden? with announcement" do
+    it "returns false when sent announcement_unread? with announcement" do
       allow(helper).to receive(:cookies).and_return("#{@announcement.to_cookie_key}" => "not hidden")
 
-      expect(helper.announcement_hidden?(@announcement)).to be false
+      expect(helper.announcement_unread?(@announcement)).to be true
     end
   end
 
   describe "and the cookies are not set" do
-    it "returns false when sent announcement_hidden? with announcement" do
+    it "returns false when sent announcement_unread? with announcement" do
       allow(helper).to receive(:cookies).and_return(Hash.new)
 
-      expect(helper.announcement_hidden?(@announcement)).to be false
+      expect(helper.announcement_unread?(@announcement)).to be true
     end
   end
 end
@@ -65,14 +65,14 @@ end
 describe AnnouncementsHelper, "#announcement_visible?" do
   describe "with an announcement that exists" do
     let(:announcement) { create :announcement }
-    it "returns true when the announcement is not hidden" do
-      allow(helper).to receive(:announcement_hidden?).and_return(false)
+    it "returns true when the user has not read the announcement" do
+      allow(helper).to receive(:announcement_unread?).and_return(true)
       result = helper.announcement_visible?(announcement)
 
       expect(result).to eq true
     end
-    it "returns false when the announcement is hidden" do
-      allow(helper).to receive(:announcement_hidden?).and_return(true)
+    it "returns false when the user has read the announcement" do
+      allow(helper).to receive(:announcement_unread?).and_return(false)
       result = helper.announcement_visible?(announcement)
 
       expect(result).to eq false
@@ -81,15 +81,15 @@ describe AnnouncementsHelper, "#announcement_visible?" do
 
   describe "with an announcement that does not exist" do
     let(:announcement) { Announcement.new }
-    it "returns false when the announcement is hidden" do
-      allow(helper).to receive(:announcement_hidden?).and_return(true)
+    it "returns false when the user has read the announcement" do
+      allow(helper).to receive(:announcement_unread?).and_return(false)
       result = helper.announcement_visible?(announcement)
 
       expect(result).to eq false
     end
 
-    it "returns false when the announcement is not hidden" do
-      allow(helper).to receive(:announcement_hidden?).and_return(false)
+    it "returns false when the user has not read the announcement" do
+      allow(helper).to receive(:announcement_unread?).and_return(true)
       result = helper.announcement_visible?(announcement)
 
       expect(result).to eq false

@@ -1,10 +1,10 @@
 module AnnouncementsHelper
   def announcement_visible?(announcement)
-    announcement.exists? && !announcement_hidden?(announcement)
+    announcement.exists? && announcement_unread?(announcement)
   end
 
-  def announcement_hidden?(announcement)
-    cookies[announcement.to_cookie_key] == "hidden"
+  def announcement_unread?(announcement)
+    cookies[announcement.to_cookie_key] != "hidden"
   end
 
   def current_announcement
