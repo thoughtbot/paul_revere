@@ -2,7 +2,7 @@ module PaulRevere
   module Generators
     class ViewsGenerator < Rails::Generators::Base
       source_root File.expand_path(
-        '../../../../app/views/announcements',
+        "../../../../app/views/announcements",
         __FILE__
       )
 
