@@ -25,6 +25,10 @@ Finally, create the announcements table by running the migration:
 
     rake db:migrate
 
+Copy built-in partials into your Rails application by running:
+
+    rails generate paul_revere:views
+
 ## Background
 
 Paul Revere provides...
