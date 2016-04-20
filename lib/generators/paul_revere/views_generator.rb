@@ -3,7 +3,7 @@ module PaulRevere
     class ViewsGenerator < Rails::Generators::Base
       source_root File.expand_path(
         "../../../../app/views/announcements",
-        __FILE__
+        __FILE__,
       )
 
       desc "Copy built-in partials to Rails application"
