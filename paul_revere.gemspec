@@ -17,12 +17,12 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency("rails", "~> 4.0")
+  s.add_dependency("rails", ">= 4.1", "< 5.1")
 
-  s.add_development_dependency("rspec-rails", "~> 3.1")
-  s.add_development_dependency("sqlite3", "~> 1.3")
-  s.add_development_dependency("appraisal", "~> 1.0")
+  s.add_development_dependency("appraisal", "~> 2.1")
+  s.add_development_dependency("factory_girl_rails", "~> 4.6")
   s.add_development_dependency("generator_spec", "~> 0.9")
-  s.add_development_dependency("factory_girl_rails", "~> 4.5")
   s.add_development_dependency("jasmine", "~> 2.2")
+  s.add_development_dependency("rspec-rails", "3.5.0.beta4")
+  s.add_development_dependency("sqlite3", "~> 1.3")
 end
