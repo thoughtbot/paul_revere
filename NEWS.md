@@ -1,3 +1,9 @@
+New in 2.1.0:
+
+* Drop explicit support for ruby versions under 2.1.0
+* Drop support for Rails versions prior to 4.1.0
+* Relax version requirements to support Rails version 5.0.x
+
 New in 2.0.0:
 
 * Remove deprecated should macros
