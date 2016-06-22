@@ -1,12 +1,18 @@
 language: ruby
 rvm:
-  - 2.0.0
-  - 2.1.5
-  - 2.2.0
+  - 2.1.8
+  - 2.2.4
+  - 2.3.0
 gemfile:
-  - gemfiles/rails_4.2.0.gemfile
-  - gemfiles/rails_4.1.0.gemfile
-  - gemfiles/rails_4.0.0.gemfile
+  - gemfiles/rails_5.0.gemfile
+  - gemfiles/rails_4.2.gemfile
+  - gemfiles/rails_4.1.gemfile
+install:
+  - 'travis_retry bundle install'
 notifications:
   email: false
 sudo: false
+matrix:
+  exclude:
+    - rvm: 2.1.8
+      gemfile: gemfiles/rails_5.0.gemfile
