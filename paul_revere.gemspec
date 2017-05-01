@@ -6,7 +6,22 @@ Gem::Specification.new do |s|
   s.version     = PaulRevere::VERSION.dup
   s.licenses    = ["MIT"]
   s.platform    = Gem::Platform::RUBY
-  s.authors     = `git shortlog -ns | cut -c8-`.split("\n")
+  s.authors     = [
+    'Matt Jankowski',
+    'Nick Quaranto',
+    'Mike Burns',
+    'Joe Ferris',
+    'Christopher Meiklejohn',
+    'Tammer Saleh',
+    'Gabe Berke-Williams',
+    'Adarsh Pandit',
+    'Cameron Desautels',
+    'Jason Morrison',
+    'Dan Croak',
+    'Ben Orenstein',
+    'Prem Sichanugrist',
+    'Amrit Ayalur',
+  ]
   s.email       = "support@thoughtbot.com"
   s.homepage    = "https://github.com/thoughtbot/paul_revere"
   s.summary     = "Simple announcement plugin to include `one off` style announcements in Rails web apps."
@@ -17,12 +32,12 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency("rails", ">= 4.1", "< 5.1")
+  s.add_dependency("rails", ">= 5.0", "< 5.2")
 
   s.add_development_dependency("appraisal", "~> 2.1")
-  s.add_development_dependency("factory_girl_rails", "~> 4.6")
+  s.add_development_dependency("factory_girl_rails", "~> 4.8")
   s.add_development_dependency("generator_spec", "~> 0.9")
-  s.add_development_dependency("jasmine", "~> 2.2")
-  s.add_development_dependency("rspec-rails", "3.5.0.beta4")
+  s.add_development_dependency("jasmine", "~> 2.6")
+  s.add_development_dependency("rspec-rails", "~> 3.5")
   s.add_development_dependency("sqlite3", "~> 1.3")
 end
