@@ -35,7 +35,7 @@ Gem::Specification.new do |s|
   s.add_dependency("rails", ">= 5.0", "< 5.2")
 
   s.add_development_dependency("appraisal", "~> 2.1")
-  s.add_development_dependency("factory_girl_rails", "~> 4.8")
+  s.add_development_dependency("factory_bot_rails", "~> 4.8")
   s.add_development_dependency("generator_spec", "~> 0.9")
   s.add_development_dependency("jasmine", "~> 2.6")
   s.add_development_dependency("rspec-rails", "~> 3.7")
