@@ -70,12 +70,12 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.0.0)
       concurrent-ruby (~> 1.0)
-    jasmine (2.6.0)
-      jasmine-core (>= 2.6.0, < 3.0.0)
+    jasmine (2.99.0)
+      jasmine-core (>= 2.99.0, < 3.0.0)
       phantomjs
       rack (>= 1.2.1)
       rake
-    jasmine-core (2.6.1)
+    jasmine-core (2.99.2)
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -160,7 +160,7 @@ DEPENDENCIES
   appraisal (~> 2.1)
   factory_bot_rails (~> 4.8)
   generator_spec (~> 0.9)
-  jasmine (~> 2.6)
+  jasmine (~> 2.99)
   paul_revere!
   rspec-rails (~> 3.7)
   sqlite3 (~> 1.3)
