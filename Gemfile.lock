@@ -63,7 +63,7 @@ GEM
     factory_bot_rails (4.8.2)
       factory_bot (~> 4.8.2)
       railties (>= 3.0.0)
-    generator_spec (0.9.3)
+    generator_spec (0.9.4)
       activesupport (>= 3.0.0)
       railties (>= 3.0.0)
     globalid (0.4.1)
