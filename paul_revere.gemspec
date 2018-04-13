@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency("appraisal", "~> 2.1")
   s.add_development_dependency("factory_bot_rails", "~> 4.8")
   s.add_development_dependency("generator_spec", "~> 0.9")
-  s.add_development_dependency("jasmine", "~> 2.99")
+  s.add_development_dependency("jasmine", "~> 3.1")
   s.add_development_dependency("rspec-rails", "~> 3.7")
   s.add_development_dependency("sqlite3", "~> 1.3")
 end
