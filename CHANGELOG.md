@@ -2,6 +2,8 @@
 
 ## Unreleased:
 
+## 3.0.0:
+
 ### Added
 
 - Add support for Rails version 5.2.x
