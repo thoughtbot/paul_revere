@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :announcement do
-    body "Announcement"
+    body { "Announcement" }
   end
 end
