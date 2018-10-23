@@ -1,8 +1,8 @@
 # Changelog
 
-## Unreleased:
+## [Unreleased]
 
-## 3.0.0:
+## [3.0.0]
 
 ### Added
 
@@ -13,7 +13,7 @@
 - Drop explicit support for ruby versions under 2.3.x
 - Drop support for Rails versions under 5.0.x
 
-## 2.1.0
+## [2.1.0]
 
 ### Added
 
@@ -24,7 +24,7 @@
 - Drop explicit support for ruby versions under 2.1.0
 - Drop support for Rails versions prior to 4.1.0
 
-## 2.0.0
+## [2.0.0]
 
 ### Added
 
@@ -37,7 +37,7 @@
 - Clean up the README and installation instructions
 - Rename helper methods and view partials
 
-## 1.4
+## [1.4]
 
 ### Removed
 
@@ -50,19 +50,19 @@
 - Update migration to avoid Rails deprecation warning about timestamps `null :false`
 - Use ISO 8601 format when creating the Announcement cookie name
 
-## 1.3
+## [1.3]
 
 ### Fixed
 
 - Fix for ActiveRecord migration/generator error on Rails 4+.
 
-## 1.2
+## [1.2]
 
 ### Added
 
 - Rails 4 support.
 
-## 1.1
+## [1.1]
 
 ### Added
 
@@ -70,7 +70,7 @@
 - More clear installation instructions for both newer and older Rails.
 - The Announcement body is attr_accessible.
 
-## 1.0
+## [1.0]
 
 ### Added
 
@@ -80,3 +80,13 @@
 ### Fixed
 
 - Fix the JavaScript that hides the announcements to work out of the box.
+
+[Unreleased]: https://github.com/thoughtbot/paul_revere/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/thoughtbot/paul_revere/compare/v2.1.0...v3.0.0
+[2.1.0]: https://github.com/thoughtbot/paul_revere/compare/v2.0.0...v2.1.0
+[2.0.0]: https://github.com/thoughtbot/paul_revere/compare/v1.4...v2.0.0
+[1.4]: https://github.com/thoughtbot/paul_revere/compare/v1.3...v1.4
+[1.3]: https://github.com/thoughtbot/paul_revere/compare/v1.2...v1.3
+[1.2]: https://github.com/thoughtbot/paul_revere/compare/v1.1...v1.2
+[1.1]: https://github.com/thoughtbot/paul_revere/compare/v1.0...v1.1
+[1.0]: https://github.com/thoughtbot/paul_revere/compare/v0.2.1...v1.0
