@@ -1,5 +1,11 @@
-["5.2.0", "5.1.0", "5.0.0"].each do |rails_version|
-  appraise "rails_#{rails_version[0..2]}" do
-    gem "rails", "~> #{rails_version}"
+rails_versions = %w(
+  5.0
+  5.1
+  5.2
+)
+
+rails_versions.each do |version|
+  appraise "rails_#{version}" do
+    gem "rails", "~> #{version}.0"
   end
 end
