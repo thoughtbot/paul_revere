@@ -7,5 +7,7 @@ rails_versions = %w(
 rails_versions.each do |version|
   appraise "rails_#{version}" do
     gem "rails", "~> #{version}.0"
+
+    gem "sqlite3", "~> 1.3.13"
   end
 end
