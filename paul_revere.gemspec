@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency("rails", ">= 5.0", "< 6.0")
+  s.add_dependency("rails", ">= 5.0", "< 6.1")
 
   s.add_development_dependency("appraisal", "~> 2.1")
   s.add_development_dependency("factory_bot_rails", "~> 4.8")
