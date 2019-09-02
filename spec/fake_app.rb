@@ -8,8 +8,10 @@ module PaulRevere
     config.secret_key_base = "test"
     config.paths["config/database"] = ["spec/support/database.yml"]
     config.eager_load = false
-    if Rails.gem_version >= Gem::Version.new("5.2")
-      config.active_record.sqlite3.represent_boolean_as_integer = true
+    if config.active_record.sqlite3.respond_to?(:represent_boolean_as_integer)
+      if Rails.gem_version < Gem::Version.new("6.0")
+        config.active_record.sqlite3.represent_boolean_as_integer = true
+      end
     end
   end
 end
