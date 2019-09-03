@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Add support for Rails version 6.0.0
+
 ## [3.0.0]
 
 ### Added
