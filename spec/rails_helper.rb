@@ -4,15 +4,21 @@ ENV["RAILS_ENV"] = "test"
 require "spec_helper"
 
 require "rails/all"
-require "rspec/rails"
+require "dummy/application"
 
-require "fake_app"
+require "rspec/rails"
+require "factory_bot"
+require "factories"
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
-require "factory_bot"
-require "factories"
+# Initialize fake app
+Dummy::Application.initialize!
+
+# Run migrations
+require_relative "../lib/generators/paul_revere/templates/migration"
+CreateAnnouncements.suppress_messages { CreateAnnouncements.new.change }
 
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
