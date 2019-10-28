@@ -3,7 +3,9 @@ ENV["RAILS_ENV"] = "test"
 
 require "spec_helper"
 
-require "rails/all"
+require "rails"
+require "active_record/railtie"
+
 require "dummy/application"
 
 require "rspec/rails"
