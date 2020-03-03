@@ -83,7 +83,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
-    jasmine (3.5.0)
+    jasmine (3.5.1)
       jasmine-core (~> 3.5.0)
       phantomjs
       rack (>= 1.2.1)
