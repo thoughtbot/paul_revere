@@ -89,7 +89,7 @@ GEM
       rack (>= 1.2.1)
       rake
     jasmine-core (3.5.0)
-    loofah (2.5.0)
+    loofah (2.6.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
