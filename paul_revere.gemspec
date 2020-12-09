@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
     'Ben Orenstein',
     'Prem Sichanugrist',
     'Amrit Ayalur',
+    'Geoff Harcourt',
   ]
   s.email       = "support@thoughtbot.com"
   s.homepage    = "https://github.com/thoughtbot/paul_revere"
@@ -32,7 +33,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency("rails", ">= 5.0", "< 6.1")
+  s.add_dependency("rails", ">= 5.0", "< 6.2")
 
   s.add_development_dependency("appraisal", "~> 2.1")
   s.add_development_dependency("factory_bot_rails", "~> 4.8")
