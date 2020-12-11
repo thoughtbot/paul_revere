@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.2.0]
+
+### Added
+
+- Add support for Rails version 6.1.0
+
 ## [3.1.0]
 
 ### Added
@@ -85,6 +91,7 @@
 
 - Fix the JavaScript that hides the announcements to work out of the box.
 
+[3.2.0]: https://github.com/thoughtbot/paul_revere/compare/v3.1.0...v3.2.0
 [3.1.0]: https://github.com/thoughtbot/paul_revere/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/thoughtbot/paul_revere/compare/v2.1.0...v3.0.0
 [2.1.0]: https://github.com/thoughtbot/paul_revere/compare/v2.0.0...v2.1.0
