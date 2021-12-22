@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     paul_revere (3.2.0)
-      rails (>= 5.0, < 6.2)
+      rails (>= 5.0, < 7.1)
 
 GEM
   remote: https://rubygems.org/
