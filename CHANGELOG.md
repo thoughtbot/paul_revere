@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.4.0]
+
+### Added
+
+- Add support for Rails version 7.1
+
 ## [3.3.0]
 
 ### Added
