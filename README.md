@@ -71,17 +71,10 @@ current session to view announcements.  The built-in implementation just checks
 that `current_user` is truth-y. Override that helper method if you want to do
 something more interesting as a check here.
 
-## Credits
-
-![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
-
-Paul Revere is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community)
-
-Thank you to all [the contributors](https://github.com/thoughtbot/paul_revere/contributors)!
-
-The names and logos for thoughtbot are trademarks of thoughtbot, inc.
-
 ## License
 
-Paul Revere is Copyright © 2009-2020 thoughtbot, inc. It is free software, and may be
+Paul Revere is Copyright © 2009-2024 thoughtbot, inc. It is free software, and may be
 redistributed under the terms specified in the MIT-LICENSE file.
+
+<!-- START /templates/footer.md -->
+<!-- END /templates/footer.md -->
