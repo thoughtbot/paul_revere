@@ -73,7 +73,7 @@ something more interesting as a check here.
 
 ## License
 
-Paul Revere is Copyright © 2009-2024 thoughtbot, inc. It is free software, and may be
+Paul Revere is Copyright © 2009 thoughtbot, inc. It is free software, and may be
 redistributed under the terms specified in the MIT-LICENSE file.
 
 <!-- START /templates/footer.md -->
