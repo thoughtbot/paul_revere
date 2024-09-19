@@ -1,3 +1,7 @@
+## Deprecated as of September 19, 2024
+
+paul_revere has been deprecated. We recommend using the [noticed](https://github.com/excid3/noticed) gem.
+
 # Paul Revere
 
 [![Build Status](https://travis-ci.org/thoughtbot/paul_revere.svg?branch=master)](https://travis-ci.org/thoughtbot/paul_revere)
